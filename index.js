@@ -27,7 +27,8 @@ app.get('/calculate-returns', (req, res) => {
 // Endpoint 2: Calculate the Total Returns.
 
 function getTotalReturns(stock1, stock2, stock3, stock4) {
-  return totalReturns = stock1 + stock2 + stock3 + stock4
+  let totalReturns = stock1 + stock2 + stock3 + stock4;
+  return totalReturns;
 }
 
 app.get('/total-returns', (req, res) => {
@@ -42,7 +43,8 @@ app.get('/total-returns', (req, res) => {
 // Endpoint 3: Calculate the Return Percentage.
 
 function getReturnPercentage(boughtAt, returns) {
-return returnPercentage = (returns / boughtAt) * 100
+  let returnPercentage = (returns / boughtAt) * 100;
+  return returnPercentage;
 }
 
 app.get('/calculate-return-percentage', (req, res) => {
@@ -55,7 +57,7 @@ app.get('/calculate-return-percentage', (req, res) => {
 // Endpoint 4: Calculate the Total Return Percentage
 
 function getTotalReturns(stock1, stock2, stock3, stock4) {
-  return totalReturns = stock1 + stock2 + stock3 + stock4
+  return stock1 + stock2 + stock3 + stock4
 }
 
 app.get('/total-return-percentage', (req, res) => {
@@ -78,7 +80,7 @@ function getStatus(returnPercentage) {
 }
 
 app.get('/status', (req, res) => {
-  returnPercentage = parseFloat(req.query.returnPercentage);
+  let returnPercentage = parseFloat(req.query.returnPercentage);
 
   res.send(getStatus(returnPercentage).toString())
 })
